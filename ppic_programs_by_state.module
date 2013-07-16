@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the PPIC programs by state feature.
+ */
+
+include_once 'ppic_programs_by_state.features.inc';
