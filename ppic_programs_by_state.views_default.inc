@@ -33,7 +33,7 @@ function ppic_programs_by_state_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
       'field' => 'field_ppic_state',
@@ -69,7 +69,7 @@ function ppic_programs_by_state_views_default_views() {
   $handler->display->display_options['fields']['field_ppic_state']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_ppic_state']['alter']['text'] = '<h2>[field_ppic_state]</h2>';
   $handler->display->display_options['fields']['field_ppic_state']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ppic_state']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_ppic_state']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_ppic_state']['delta_offset'] = '0';
   /* Field: Content: Specialty */
   $handler->display->display_options['fields']['field_ppic_specialty']['id'] = 'field_ppic_specialty';
@@ -96,90 +96,6 @@ function ppic_programs_by_state_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'ppic_program' => 'ppic_program',
-  );
-  /* Filter criterion: Content: State (field_ppic_state) */
-  $handler->display->display_options['filters']['field_ppic_state_value']['id'] = 'field_ppic_state_value';
-  $handler->display->display_options['filters']['field_ppic_state_value']['table'] = 'field_data_field_ppic_state';
-  $handler->display->display_options['filters']['field_ppic_state_value']['field'] = 'field_ppic_state_value';
-  $handler->display->display_options['filters']['field_ppic_state_value']['value'] = array(
-    'all' => 'all',
-    'Nat' => 'Nat',
-    'AL' => 'AL',
-    'AK' => 'AK',
-    'AZ' => 'AZ',
-    'AR' => 'AR',
-    'CA' => 'CA',
-    'CO' => 'CO',
-    'CT' => 'CT',
-    'DE' => 'DE',
-    'DC' => 'DC',
-    'FL' => 'FL',
-    'GA' => 'GA',
-    'HI' => 'HI',
-    'ID' => 'ID',
-    'IL' => 'IL',
-    'IN' => 'IN',
-    'IA' => 'IA',
-    'KS' => 'KS',
-    'KY' => 'KY',
-    'LA' => 'LA',
-    'ME' => 'ME',
-    'MD' => 'MD',
-    'MA' => 'MA',
-    'MI' => 'MI',
-    'MN' => 'MN',
-    'MS' => 'MS',
-    'MO' => 'MO',
-    'MT' => 'MT',
-    'NE' => 'NE',
-    'NV' => 'NV',
-    'NH' => 'NH',
-    'NJ' => 'NJ',
-    'NM' => 'NM',
-    'NY' => 'NY',
-    'NC' => 'NC',
-    'ND' => 'ND',
-    'OH' => 'OH',
-    'OK' => 'OK',
-    'OR' => 'OR',
-    'PA' => 'PA',
-    'RI' => 'RI',
-    'SC' => 'SC',
-    'SD' => 'SD',
-    'TN' => 'TN',
-    'TX' => 'TX',
-    'UT' => 'UT',
-    'VT' => 'VT',
-    'VA' => 'VA',
-    'WA' => 'WA',
-    'WV' => 'WV',
-    'WI' => 'WI',
-    'WY' => 'WY',
-  );
-  $handler->display->display_options['filters']['field_ppic_state_value']['expose']['operator_id'] = 'field_ppic_state_value_op';
-  $handler->display->display_options['filters']['field_ppic_state_value']['expose']['label'] = 'State (field_ppic_state)';
-  $handler->display->display_options['filters']['field_ppic_state_value']['expose']['operator'] = 'field_ppic_state_value_op';
-  $handler->display->display_options['filters']['field_ppic_state_value']['expose']['identifier'] = 'field_ppic_state_value';
-  $handler->display->display_options['filters']['field_ppic_state_value']['is_grouped'] = TRUE;
-  $handler->display->display_options['filters']['field_ppic_state_value']['group_info']['label'] = 'State (field_ppic_state)';
-  $handler->display->display_options['filters']['field_ppic_state_value']['group_info']['identifier'] = 'field_ppic_state_value';
-  $handler->display->display_options['filters']['field_ppic_state_value']['group_info']['default_group'] = '1';
-  $handler->display->display_options['filters']['field_ppic_state_value']['group_info']['group_items'] = array(
-    1 => array(
-      'title' => '',
-      'operator' => 'or',
-      'value' => array(),
-    ),
-    2 => array(
-      'title' => '',
-      'operator' => 'or',
-      'value' => array(),
-    ),
-    3 => array(
-      'title' => '',
-      'operator' => 'or',
-      'value' => array(),
-    ),
   );
   /* Filter criterion: Content: Specialty (field_ppic_specialty) */
   $handler->display->display_options['filters']['field_ppic_specialty_value']['id'] = 'field_ppic_specialty_value';
